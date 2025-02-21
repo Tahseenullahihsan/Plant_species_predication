@@ -8,11 +8,11 @@ pipeline {
             }
         }
 
-        stage('Clone the Repository') {
+      //  stage('Clone the Repository') {
           //  steps {
             //    git branch: 'main', url: 'https://github.com/Tahseenullahihsan/Plant_species_predication.git'
-            }
-        }
+      //      }
+      //  }
 
         stage('Install Dependencies Manually') {
             steps {
