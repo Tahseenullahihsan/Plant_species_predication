@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Check Python Version') {
+            steps {
+                sh 'python3 --version'
+            }
+        }
+
+        stage('Clone the Repository') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Tahseenullahihsan/Plant_species_predication.git'
+            }
+        }
+
+        stage('Install Dependencies Manually') {
+            steps {
+                sh '''
+                    python3 -m venv venv
+                    . venv/bin/activate
+                    pip install --upgrade pip
+                    pip install pandas matplotlib seaborn numpy scikit-learn
+                '''
+            }
+        }
+
+        stage('Run the Python Script') {
+            steps {
+                sh '''
+                    . venv/bin/activate
+                    python3 plant_species.py
+                '''
+            }
+        }
+    }
+}
+
