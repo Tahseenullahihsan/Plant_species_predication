@@ -20,6 +20,6 @@ sns.scatterplot(x='sepal_length', y='sepal_width',
                 hue='species', data=data, )
 
 # Placing Legend outside the Figure
-data.legend(bbox_to_anchor=(1, 1), loc=2)
+plt.legend(bbox_to_anchor=(1, 1), loc=2)
 
 plt.show()
