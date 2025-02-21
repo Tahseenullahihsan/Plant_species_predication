@@ -9,7 +9,7 @@ pipeline {
         }
 
         stage('Clone the Repository') {
-            steps {
+          //  steps {
             //    git branch: 'main', url: 'https://github.com/Tahseenullahihsan/Plant_species_predication.git'
             }
         }
