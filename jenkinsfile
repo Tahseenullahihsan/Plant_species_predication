@@ -33,6 +33,11 @@ pipeline {
         }
   
         stage('Run the Python Script') {
+agent {
+  label {
+    label 'jenkins-external'
+  }
+}
             steps {
                 sh '''
                     . venv/bin/activate
