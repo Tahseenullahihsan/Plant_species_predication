@@ -24,13 +24,13 @@ pipeline {
                 '''
             }
         }
-        stage('Sleep Before Execution') {
-            steps {
-                script {
-                    echo "Sleeping for ${sleepTime} seconds..."
-                }
-            }
-        }
+     //   stage('Sleep Before Execution') {
+    //        steps {
+    //            script {
+    //                echo "Sleeping for ${sleepTime} seconds..."
+    //            }
+    //        }
+    //    }
   
         stage('Run the Python Script') {
 agent {
